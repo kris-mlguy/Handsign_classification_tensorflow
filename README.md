@@ -1,18 +1,21 @@
-### Natural Language Processing - sentiment classification
+### Image processing - handsign classification
 
--> Natural Language Processing (NLP) is that branch of AI which deals with learning of computers on how to process and analyze large amounts of natural language data  
+-> Handsign classification is a multi class classification problem based on pictures    
 
--> Sentiment classification is a classification process based on the subjective sentimental opinions given in the form of text
+-> The images are saved as numpy arrays   
 
--> 1000 reviews for a restaurant is given as dataset
+-> The dataset consists of 1200 examples, with each example having 64 (pixels) x 64 (pixels) x 3 (colors) matrix  
 
--> The objective of the exercise is to analyze and predict/classify whether a review is positive or negative, after training with the given dataset  
+-> The objective is to classify a given picture (in the form of numpy arrays) into numbers from 0 to 5  
 
 Steps: 
-1) Cleaning the texts (including stemming and tokenization)   
-2) Creating Bag of Words model  
-3) Splitting the dataset into training (80%) and test (20%) sets  
-4) Fitting Naive-Bayes classifier to the training set  
-5) Predicting the test set result  
-6) Making the confusion matrix  
+1) Flattening the images and normalize image vectors       
+2) One hot encoding of labels  
+3) Create placeholders and initialize weight matrices  
+4) Forward propagation and compute cost  
+5) Backpropagation for optimization of weights
+6) Run the optimizer and cost functions within a tensorflow session  
+7) Run the optimizer using minibatches from training set for a number of epochs until the cost is sufficiently reduced and weights are optimized  
+8) Calculate accuracy for training and test sets  
+
 
